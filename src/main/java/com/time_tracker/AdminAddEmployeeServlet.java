@@ -32,7 +32,7 @@ public class AdminAddEmployeeServlet extends HttpServlet {
         EmployeeDAO employeeDAO = new EmployeeDAO();
 
         boolean isAdded = employeeDAO.addEmployee(employee);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("admin_home.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("admin_add_employee.jsp");
         if (isAdded) {
             request.setAttribute("status", "success");
         } else {
